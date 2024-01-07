@@ -1,0 +1,48 @@
+@import "fonts";
+@import "libs";
+@import "base";
+@import "vars";
+@import "mixins";
+
+.primary-btn {
+    @include font-size(16px);
+    display: inline-block;
+    background-color: $primary;
+    color: $white;
+    border-radius: $borderRadius;
+    cursor: pointer;
+    width: 150px;
+    line-height: normal;
+    padding: 1rem;
+    transition: $transition;
+    border: 2px solid $primary;
+    text-decoration: none;
+    &:hover {
+        background-color: transparent;
+        color: $primary;
+        font-weight: bold;
+    }
+}
+
+.title {
+    @include font-size(64px);
+    margin: 0 0 1rem 0;
+    font-family: $accentFontFamily;
+    font-style: italic;
+}
+
+.subtitle {
+    @include font-size(16px);
+    margin: 0 0 1rem 0;
+    span {
+        @include font-size(20px);
+        font-family: $accentFontFamily;
+        font-style: italic;
+        color: $primary;
+        font-weight: bold;
+    }
+}
+
+section {
+    text-align: center;
+}

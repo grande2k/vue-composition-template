@@ -1,0 +1,60 @@
+/*** FONT-SIZE ***/
+/** When the browser doesn’t support rem sizing,
+the mixin will calculate the pixel equivalent of the initial rem size you set and output both pixel and rem values for an element. **/
+@function calculateRem($size) {
+    $remSize: calc($size / 16px);
+    @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}
+
+/*** FONT-SIZE ***/
+
+
+/*** FLEX-LAYOUT ***/
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-center-column {
+    @include flex-center;
+    flex-direction: column;
+}
+
+@mixin flex-center-vert {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-center-horiz {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flex-center-sb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*** FLEX-LAYOUT ***/
+
+
+/*** GRID-LAYOUT ***/
+@mixin grid($columns, $gap) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    grid-gap: $gap;
+}
+
+/*** GRID-LAYOUT ***/
