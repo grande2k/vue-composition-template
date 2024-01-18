@@ -13,3 +13,7 @@
 
     const appStore = useAppStore();
 </script>
+
+<style lang="scss">
+    
+</style>
