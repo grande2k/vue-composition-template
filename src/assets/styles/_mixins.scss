@@ -15,6 +15,13 @@ the mixin will calculate the pixel equivalent of the initial rem size you set an
 
 
 /*** FLEX-LAYOUT ***/
+@mixin flex($direction, $align-items, $justify-content) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
 @mixin flex-column {
     display: flex;
     flex-direction: column;
@@ -56,5 +63,4 @@ the mixin will calculate the pixel equivalent of the initial rem size you set an
     grid-template-columns: repeat($columns, 1fr);
     grid-gap: $gap;
 }
-
 /*** GRID-LAYOUT ***/
